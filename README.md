@@ -43,6 +43,5 @@ Chrome instalado
 ChromeDriver compatível com a versão do seu Chrome
 
 ## Autora
-Maria Rayanna
-Engenheira de testes de software.
+Maria Rayanna Santos - Engenheira de testes de software.
   
