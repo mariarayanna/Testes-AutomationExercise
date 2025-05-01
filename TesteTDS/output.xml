@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.2.2 (Python 3.13.3 on win32)" generated="2025-05-01T11:56:12.666838" rpa="false" schemaversion="5">
+<suite id="s1" name="TesteTDS MRayanna Ecommerce" source="c:\TesteTDS\TesteTDS_MRayanna_Ecommerce.robot">
+<kw name="Abrir Navegador Para Automation Exercise" owner="Resources_TesteTDS_MRayanna_Ecommerce" type="SETUP">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:14.256284" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T11:56:14.245294" elapsed="13.845428"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.095608" elapsed="0.094819"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:14.234531" elapsed="13.962782"/>
+</kw>
+<test id="s1-t1" name="Cenário 1: Usuário se cadastra com sucesso no site" line="9">
+<kw name="Generate Random String" owner="String">
+<msg time="2025-05-01T11:56:28.236213" level="INFO">${RANDOM} = aqfTKE</msg>
+<var>${RANDOM}</var>
+<arg>6</arg>
+<arg>[LETTERS]</arg>
+<doc>Generates a string with a desired ``length`` from the given ``chars``.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.231853" elapsed="0.005107"/>
+</kw>
+<kw name="Set Test Variable" owner="BuiltIn">
+<msg time="2025-05-01T11:56:28.254675" level="INFO">${EMAIL} = joao.silvaaqfTKE@example.com</msg>
+<arg>${EMAIL}</arg>
+<arg>joao.silva${RANDOM}@example.com</arg>
+<doc>Makes a variable available everywhere within the scope of the current test.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.240092" elapsed="0.019187"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-05-01T11:56:28.285693" level="INFO">${EMAIL} = joao.silvaaqfTKE@example.com</msg>
+<arg>${EMAIL}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.276989" elapsed="0.010718"/>
+</kw>
+<kw name="Set Suite Variable" owner="BuiltIn">
+<msg time="2025-05-01T11:56:28.305968" level="INFO">${PASSWORD} = senha123</msg>
+<arg>${PASSWORD}</arg>
+<doc>Makes a variable available everywhere within the scope of the current suite.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.300323" elapsed="0.016803"/>
+</kw>
+<kw name="Acessar Página de Cadastro" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:28.339197" level="INFO">Opening url 'https://www.automationexercise.com//login'</msg>
+<arg>${URL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-01T11:56:28.333640" elapsed="0.695205"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:28.324334" elapsed="0.707680"/>
+</kw>
+<kw name="Preencher Formulário de Cadastro" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:29.053287" level="INFO">Typing text 'João da Silva' into text field 'xpath=//input[@placeholder='Name']'.</msg>
+<arg>xpath=//input[@placeholder='Name']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:29.045817" elapsed="0.489811"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:29.544545" level="INFO">Typing text 'joao.silvaaqfTKE@example.com' into text field 'xpath=//input[@data-qa="signup-email"]'.</msg>
+<arg>xpath=//input[@data-qa="signup-email"]</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:29.538901" elapsed="0.527311"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:30.072821" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Signup')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Signup')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:30.068985" elapsed="0.892150"/>
+</kw>
+<arg>${NAME}</arg>
+<arg>${EMAIL}</arg>
+<status status="PASS" start="2025-05-01T11:56:29.036409" elapsed="1.928316"/>
+</kw>
+<kw name="Preencher Detalhes da Conta" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:30.980611" level="INFO">Clicking element 'id=id_gender1'.</msg>
+<arg>id=id_gender1</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:30.975275" elapsed="0.215661"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:31.202859" level="INFO">Typing text 'senha123' into text field 'id=password'.</msg>
+<arg>id=password</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:31.195239" elapsed="0.423399"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:31.626022" level="INFO">Typing text 'João' into text field 'id=first_name'.</msg>
+<arg>id=first_name</arg>
+<arg>João</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:31.621682" elapsed="0.548206"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:32.176669" level="INFO">Typing text 'Silva' into text field 'id=last_name'.</msg>
+<arg>id=last_name</arg>
+<arg>Silva</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:32.172586" elapsed="0.687073"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:32.868574" level="INFO">Typing text 'Rua Exemplo, 123' into text field 'id=address1'.</msg>
+<arg>id=address1</arg>
+<arg>Rua Exemplo, 123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:32.864379" elapsed="1.009111"/>
+</kw>
+<kw name="Select From List By Label" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:33.891111" level="INFO">Selecting options from selection list 'id=country' by label New Zealand.</msg>
+<arg>id=country</arg>
+<arg>New Zealand</arg>
+<doc>Selects options from selection list ``locator`` by ``labels``.</doc>
+<status status="PASS" start="2025-05-01T11:56:33.883200" elapsed="0.639313"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:34.537233" level="INFO">Typing text 'Recife' into text field 'id=city'.</msg>
+<arg>id=city</arg>
+<arg>Recife</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:34.525811" elapsed="0.398815"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:34.938174" level="INFO">Typing text 'PE' into text field 'id=state'.</msg>
+<arg>id=state</arg>
+<arg>PE</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:34.926101" elapsed="0.260150"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:35.197574" level="INFO">Typing text '12345' into text field 'id=zipcode'.</msg>
+<arg>id=zipcode</arg>
+<arg>12345</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:35.189606" elapsed="0.266264"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:35.467065" level="INFO">Typing text '81999999999' into text field 'id=mobile_number'.</msg>
+<arg>id=mobile_number</arg>
+<arg>81999999999</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:35.458366" elapsed="0.275055"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:35.737653" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Create Account')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Create Account')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:35.735665" elapsed="1.965769"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:30.970376" elapsed="6.733316"/>
+</kw>
+<kw name="Verificar Mensagem de Sucesso Cadastro" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:38.022732" level="INFO">Element 'xpath=//h2' contains text 'ACCOUNT CREATED!'.</msg>
+<arg>xpath=//h2</arg>
+<arg>ACCOUNT CREATED!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-01T11:56:37.724799" elapsed="0.299794"/>
+</kw>
+<arg>Account Created!</arg>
+<status status="PASS" start="2025-05-01T11:56:37.718701" elapsed="0.307749"/>
+</kw>
+<kw name="Fechar Navegador" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T11:56:38.037000" elapsed="2.506181"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:38.033587" elapsed="2.518374"/>
+</kw>
+<doc>Cadastro de novo usuário no site</doc>
+<status status="PASS" start="2025-05-01T11:56:28.201725" elapsed="12.369634"/>
+</test>
+<test id="s1-t2" name="Cenário 2: Login com credenciais válidas" line="21">
+<kw name="Abrir Navegador Para Automation Exercise" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:40.622012" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T11:56:40.618213" elapsed="8.312767"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-01T11:56:48.932514" elapsed="0.092353"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:40.614878" elapsed="8.410952"/>
+</kw>
+<kw name="Acessar Página de Login" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Go To" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:49.051690" level="INFO">Opening url 'https://www.automationexercise.com//login'</msg>
+<arg>${URL}/login</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<status status="PASS" start="2025-05-01T11:56:49.044093" elapsed="1.345419"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:49.037616" elapsed="1.354881"/>
+</kw>
+<kw name="Efetuar Login" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:50.413694" level="INFO">Typing text 'joao.silvaaqfTKE@example.com' into text field 'xpath=//input[@data-qa='login-email']'.</msg>
+<arg>xpath=//input[@data-qa='login-email']</arg>
+<arg>${email}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:50.405753" elapsed="0.688548"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//input[@placeholder='Password']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:51.097966" elapsed="0.085971"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:51.187051" level="INFO">Typing text 'senha123' into text field 'name=password'.</msg>
+<arg>name=password</arg>
+<arg>${password}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:51.185150" elapsed="0.215686"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:51.403704" level="INFO">Clicking button 'xpath=//button[contains(text(), 'Login')]'.</msg>
+<arg>xpath=//button[contains(text(), 'Login')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:51.402151" elapsed="5.129785"/>
+</kw>
+<arg>${EMAIL}</arg>
+<arg>${PASSWORD}</arg>
+<status status="PASS" start="2025-05-01T11:56:50.398788" elapsed="6.135326"/>
+</kw>
+<kw name="Verificar Mensagem de Sucesso Login" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href="/logout"]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:56.543779" elapsed="0.054995"/>
+</kw>
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:56.632329" level="INFO">Element 'xpath=//a[@href="/logout"]' is displayed.</msg>
+<arg>xpath=//a[@href="/logout"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:56.600004" elapsed="0.033359"/>
+</kw>
+<arg>Logged in as ${NAME}</arg>
+<status status="PASS" start="2025-05-01T11:56:56.538350" elapsed="0.095849"/>
+</kw>
+<doc>Login com e-mail e senha válidos</doc>
+<status status="PASS" start="2025-05-01T11:56:40.589648" elapsed="16.047277"/>
+</test>
+<test id="s1-t3" name="Cenário 3: Usuário autenticado realiza compra com sucesso" line="28">
+<kw name="Adicionar Produto ao Carrinho 1" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:56.755178" elapsed="0.224053"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-01T11:56:56.980539" elapsed="0.320834"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:57.304371" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Blue Top')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]'.</msg>
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:57.302567" elapsed="0.244324"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='modal-content']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:57.550329" elapsed="0.598984"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:58.151542" elapsed="0.071975"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:58.231381" level="INFO">Clicking button 'xpath=//button[contains(@class, 'close-modal')]'.</msg>
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:58.224789" elapsed="0.432818"/>
+</kw>
+<arg>${PRODUCT1}</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-05-01T11:56:56.714122" elapsed="1.950466"/>
+</kw>
+<kw name="Adicionar Produto ao Carrinho 2" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:58.680600" elapsed="0.078910"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-01T11:56:58.763064" elapsed="0.323530"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:59.091881" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Men Tshirt')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]'.</msg>
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:59.089576" elapsed="0.183560"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='modal-content']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:59.274369" elapsed="0.578630"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:56:59.855659" elapsed="0.048816"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:56:59.911323" level="INFO">Clicking button 'xpath=//button[contains(@class, 'close-modal')]'.</msg>
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:56:59.907049" elapsed="0.198966"/>
+</kw>
+<arg>${PRODUCT2}</arg>
+<arg>2</arg>
+<status status="PASS" start="2025-05-01T11:56:58.672105" elapsed="1.434865"/>
+</kw>
+<kw name="Ir Para o Carrinho" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='/view_cart' and contains(., 'Cart')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:00.116640" elapsed="0.058463"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:00.179133" level="INFO">Clicking element 'xpath=//a[@href='/view_cart' and contains(., 'Cart')]'.</msg>
+<arg>xpath=//a[@href='/view_cart' and contains(., 'Cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:00.177566" elapsed="2.030377"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:00.112593" elapsed="2.098825"/>
+</kw>
+<kw name="Iniciar Checkout" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Proceed To Checkout')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:02.222487" elapsed="0.080945"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:02.306062" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Proceed To Checkout')]'.</msg>
+<arg>xpath=//a[contains(text(), 'Proceed To Checkout')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:02.304656" elapsed="2.132187"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Place Order')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:04.438042" elapsed="0.044318"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:04.485651" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Place Order')]'.</msg>
+<arg>xpath=//a[contains(text(), 'Place Order')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:04.483744" elapsed="1.122749"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:02.216654" elapsed="3.391903"/>
+</kw>
+<kw name="Inserir Informações de Pagamento" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:05.621198" level="INFO">Typing text 'João da Silva' into text field 'xpath=//input[@name='name_on_card']'.</msg>
+<arg>xpath=//input[@name='name_on_card']</arg>
+<arg>${name}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:05.618757" elapsed="0.630682"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:06.256368" level="INFO">Typing text '4111111111111111' into text field 'xpath=//input[@name='card_number']'.</msg>
+<arg>xpath=//input[@name='card_number']</arg>
+<arg>4111111111111111</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:06.252369" elapsed="0.434673"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:06.689857" level="INFO">Typing text '123' into text field 'xpath=//input[@name='cvc']'.</msg>
+<arg>xpath=//input[@name='cvc']</arg>
+<arg>123</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:06.688248" elapsed="0.468746"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:07.165792" level="INFO">Typing text '12' into text field 'xpath=//input[@name='expiry_month']'.</msg>
+<arg>xpath=//input[@name='expiry_month']</arg>
+<arg>12</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:07.160629" elapsed="0.325644"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:07.505015" level="INFO">Typing text '2023' into text field 'xpath=//input[@name='expiry_year']'.</msg>
+<arg>xpath=//input[@name='expiry_year']</arg>
+<arg>2023</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:07.489374" elapsed="0.353764"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:07.850205" level="INFO">Clicking button 'xpath=//button[@id='submit']'.</msg>
+<arg>xpath=//button[@id='submit']</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:07.847070" elapsed="3.202737"/>
+</kw>
+<arg>${NAME}</arg>
+<status status="PASS" start="2025-05-01T11:57:05.616049" elapsed="5.434813"/>
+</kw>
+<kw name="Verificar Mensagem de Sucesso Compra" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Element Should Contain" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:11.144955" level="INFO">Element 'xpath=//h2' contains text 'ORDER PLACED!'.</msg>
+<arg>xpath=//h2</arg>
+<arg>ORDER PLACED!</arg>
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<status status="PASS" start="2025-05-01T11:57:11.058005" elapsed="0.089149"/>
+</kw>
+<arg>Order Placed Successfully!</arg>
+<status status="PASS" start="2025-05-01T11:57:11.055293" elapsed="0.093909"/>
+</kw>
+<kw name="Fechar Navegador" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T11:57:11.156739" elapsed="2.599093"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:11.153542" elapsed="2.611320"/>
+</kw>
+<doc>Finalização de compra autenticado</doc>
+<status status="PASS" start="2025-05-01T11:56:56.649019" elapsed="17.127777"/>
+</test>
+<test id="s1-t4" name="Cenário 4: Usuário não autenticado tenta concluir a compra" line="38">
+<kw name="Abrir Navegador Para Automation Exercise" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:13.806465" level="INFO">Opening browser 'chrome' to base url 'https://www.automationexercise.com/'.</msg>
+<arg>${URL}</arg>
+<arg>chrome</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-05-01T11:57:13.804862" elapsed="9.349773"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-05-01T11:57:23.156358" elapsed="0.096029"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:13.802669" elapsed="9.453939"/>
+</kw>
+<kw name="Adicionar Produto ao Carrinho 1" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:23.287793" elapsed="0.072965"/>
+</kw>
+<kw name="Scroll Element Into View" owner="SeleniumLibrary">
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]</arg>
+<doc>Scrolls the element identified by ``locator`` into view.</doc>
+<status status="PASS" start="2025-05-01T11:57:23.362346" elapsed="0.317896"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:23.683323" level="INFO">Clicking element 'xpath=//p[contains(text(), 'Blue Top')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]'.</msg>
+<arg>xpath=//p[contains(text(), '${produto}')]/ancestor::div[contains(@class, 'productinfo')]/following-sibling::div//a[contains(text(), 'Add to cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:23.681582" elapsed="0.321201"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//div[@class='modal-content']</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:24.005986" elapsed="1.072238"/>
+</kw>
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<arg>timeout=5s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:25.079521" elapsed="0.043918"/>
+</kw>
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:25.127200" level="INFO">Clicking button 'xpath=//button[contains(@class, 'close-modal')]'.</msg>
+<arg>xpath=//button[contains(@class, 'close-modal')]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:25.125513" elapsed="0.206786"/>
+</kw>
+<arg>${PRODUCT1}</arg>
+<arg>1</arg>
+<status status="PASS" start="2025-05-01T11:57:23.280443" elapsed="2.052874"/>
+</kw>
+<kw name="Ir Para o Carrinho" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[@href='/view_cart' and contains(., 'Cart')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:25.339260" elapsed="0.078514"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:25.420836" level="INFO">Clicking element 'xpath=//a[@href='/view_cart' and contains(., 'Cart')]'.</msg>
+<arg>xpath=//a[@href='/view_cart' and contains(., 'Cart')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:25.419310" elapsed="1.554673"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:25.336919" elapsed="1.639941"/>
+</kw>
+<kw name="Iniciar Checkout sem cadastro" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Wait Until Element Is Visible" owner="SeleniumLibrary">
+<arg>xpath=//a[contains(text(), 'Proceed To Checkout')]</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:26.986832" elapsed="0.060250"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:27.049764" level="INFO">Clicking element 'xpath=//a[contains(text(), 'Proceed To Checkout')]'.</msg>
+<arg>xpath=//a[contains(text(), 'Proceed To Checkout')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-05-01T11:57:27.048317" elapsed="0.268640"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:26.983207" elapsed="0.334954"/>
+</kw>
+<kw name="Verificar Redirecionamento Para Login" owner="Resources_TesteTDS_MRayanna_Ecommerce">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-05-01T11:57:27.386304" level="INFO">Element 'xpath=//div[@class='modal-body']//a[@href='/login']' is displayed.</msg>
+<arg>xpath=//div[@class='modal-body']//a[@href='/login']</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-05-01T11:57:27.328663" elapsed="0.058804"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:27.322393" elapsed="0.065920"/>
+</kw>
+<doc>Verifica se o usuário é redirecionado ao login ao tentar comprar sem estar autenticado</doc>
+<status status="PASS" start="2025-05-01T11:57:13.785690" elapsed="13.606382"/>
+</test>
+<kw name="Fechar Navegador" owner="Resources_TesteTDS_MRayanna_Ecommerce" type="TEARDOWN">
+<kw name="Close Browser" owner="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" start="2025-05-01T11:57:27.411633" elapsed="2.472015"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:57:27.403550" elapsed="2.483602"/>
+</kw>
+<status status="PASS" start="2025-05-01T11:56:12.690192" elapsed="77.199143"/>
+</suite>
+<statistics>
+<total>
+<stat pass="4" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="TesteTDS MRayanna Ecommerce" id="s1" pass="4" fail="0" skip="0">TesteTDS MRayanna Ecommerce</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
